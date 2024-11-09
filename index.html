@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./style.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <header>
+      <div class="logo">ShopIt</div>
+      <div class="burger-menu" id="burger-menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+      <nav class="nav-menu" id="nav-menu">
+        <ul>
+          <li><a href="">Home</a></li>
+          <li><a href="">About us</a></li>
+          <li><a href="">Product</a></li>
+          <li><a href="">Contacts</a></li>
+        </ul>
+      </nav>
+    </header>
+   
+                <main>
+                  <div class="products">
+                    <div class="card">
+                      <h3>New Balance 997</h3>
+                      <img
+                        src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTvWc72gBNAgpLHa6RfZMaqWZonwvSgH1hWvw&s"
+                        alt=""
+                      />
+                      
+                        <button id="payButton">Buy</button>
+                      
+                    </div>
+                    <div class="card">
+                      <h3>Nike air Jordan</h3>
+                      <img
+                        src="https://myreact.ru/wp-content/uploads/2024/05/air-jordan-1-retro-high-og-e5a48de588bbe794b7e5ad90e8bf90e58aa8e99e8b-vr9dfd_21848.png"
+                        alt=""
+                      />
+                      <button id="payButton">Buy</button>
+                    </div>
+                    <div class="card">
+                      <h3>Addidas samba</h3>
+                      <img
+                        src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ74oFSkPLDu-Ns6FJGFeFmFoBXT0CvQkn5Rw&s"
+                        alt=""
+                      />
+                      <button id="payButton">Buy</button>
+                    </div>
+                  </div>
+                </main>
+                <footer>
+                  <div class="footer-content">
+                    <p>&copy; 2024 Algoritmika. content.</p>
+                    <ul class="footer-links">
+                      <li><a href="#">Home</a></li>
+                      <li><a href="#">About us </a></li>
+                      <li><a href="#">Products</a></li>
+                      <li><a href="#">Contacts</a></li>
+                    </ul>
+                    <div class="social-icons">
+                      <a href="#"
+                        ><img
+                          src="https://static.vecteezy.com/system/resources/previews/026/127/328/non_2x/telegram-logo-telegram-icon-transparent-telegram-icon-rounded-free-png.png"
+                          alt=""
+                      /></a>
+                      <a href="#"
+                        ><img
+                          src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a5/Instagram_icon.png/1024px-Instagram_icon.png"
+                          alt=""
+                      /></a>
+                      <a href="#"
+                        ><img
+                          src="https://freepnglogo.com/images/all_img/1691832581twitter-x-icon-png.png"
+                          alt=""
+                      /></a>
+                    </div>
+                  </div>
+                </footer>
+            <div class="popup" id="popup">
+              <div class="popup-content">
+                <span class="close" id="closeButton">&times;</span>
+                <p>Оплата прошла успешно</p>
+              </div>
+            </div>
+                <script>
+                  const bMenu = document.getElementById("burger-menu");
+                  const nMenu = document.getElementById("nav-menu");
+                  bMenu.addEventListener("click", () => {
+                    nMenu.classList.toggle("show");
+                  });
+                  const payButton = document.getElementById('payButton');
+const popup = document.getElementById('popup');
+const closeButton = document.getElementById('closeButton');
+payButton.addEventListener('click', () => {
+    popup.style.display = 'block';
+});
+closeButton.addEventListener('click', () => {
+    popup.style.display = 'none';
+});
+window.addEventListener('click', (event) => {
+    if (event.target == popup) {
+        popup.style.display = 'none';
+    }
+});
+                </script>
+              </body>
+            </html>
+            
